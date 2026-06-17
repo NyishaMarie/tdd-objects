@@ -163,8 +163,13 @@ export function getCarnivoreNames(animals) {
  * getTotalCost([{name: "Notebook", quantity: 0, price: 5}]); // 0
  */
 export function getTotalCost(cart) {
-  // TODO
+  let num = 0;
+  for (const item of cart) {
+    num = num + item.quantity * item.price;
+  }
+  return num;
 }
+
 
 /**
  * Zip is an operation that merges two arrays into a single object.
